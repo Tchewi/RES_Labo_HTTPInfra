@@ -21,17 +21,21 @@
 - run new one with docker run -p 9090:80 res/apache_php, forgot the -d but who really cares, I can just open a new tab in my terminal
 - copied all the stuff from quentin's src/ because he's still cool so that things look pretty tm
 - I wont customize more as it's a huge loss of time for absolutely no gain
--
 
 
 ### Check boxes
 
-- [ ] You have a GitHub repo with everything needed to build the Docker image.
-- [ ] You can do a demo, where you build the image, run a container and access content from a browser.
-- [ ] You have used a nice looking web template, different from the one shown in the webcast.
-- [ ] You are able to explain what you do in the Dockerfile.
-- [ ] You are able to show where the apache config files are located (in a running container).
-- [ ] You have documented your configuration in your report.
+- [X] You have a GitHub repo with everything needed to build the Docker image.
+- [x] You can do a demo, where you build the image, run a container and access content from a browser.
+ - Only with my guide, not from head 
+- [x] You have used a nice looking web template, different from the one shown in the webcast.
+ - If Le Ray haven't done it before, I wouldn't have bothered
+- [x] You are able to explain what you do in the Dockerfile.
+ - I did almost nothing in my docker file, I can easily explain what I did
+- [X] You are able to show where the apache config files are located (in a running container).
+ - I suppose yes, its in the etc folder somewhere with apache or conf
+- [x] You have documented your configuration in your report.
+ - step by step and in english
 
 
 ## step 2
