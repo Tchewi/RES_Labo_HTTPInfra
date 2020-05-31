@@ -27,13 +27,18 @@
 
 - [X] You have a GitHub repo with everything needed to build the Docker image.
 - [x] You can do a demo, where you build the image, run a container and access content from a browser.
- - Only with my guide, not from head 
+ - with these commands: `docker build -t res/apache_php .` at the Dockerfile level I build the image, with `docker run -p 9090:80 res/apache_php` (note the absence of -d) I run the container for which I just build an image, and I access it in my browser at address `localhost:9090`
 - [x] You have used a nice looking web template, different from the one shown in the webcast.
  - If Le Ray had not done it before, I wouldn't have bothered
 - [x] You are able to explain what you do in the Dockerfile.
  - I did almost nothing in my docker file, I can easily explain what I did
+```bash
+FROM php:7.4.6-apache
+
+COPY src/ /var/www/html/
+```
 - [X] You are able to show where the apache config files are located (in a running container).
- - I suppose yes, its in the etc folder somewhere with apache or conf
+ - I suppose yes, its in `etc/apache2/apache2.conf` the files `etc/apache2/sites-available` and `etc/apache2/sites-enabled` also have some sort of significance
 - [x] You have documented your configuration in your report.
  - step by step and in English
 
