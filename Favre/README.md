@@ -26,7 +26,7 @@
 ### Check boxes
 
 - [X] You have a GitHub repo with everything needed to build the Docker image.
- -at commit 972b23f2a68e1addbcb656083c48e401a6d1e2f2
+ - at commit 972b23f2a68e1addbcb656083c48e401a6d1e2f2 and beyond (and some before too, isnt life generous?)
 - [x] You can do a demo, where you build the image, run a container and access content from a browser.
  - with these commands: `docker build -t res/apache_php .` at the Dockerfile level I build the image, with `docker run -p 9090:80 res/apache_php` (note the absence of -d) I run the container for which I just build an image, and I access it in my browser at address `localhost:9090`.
 - [x] You have used a nice looking web template, different from the one shown in the webcast.
