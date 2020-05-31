@@ -29,13 +29,13 @@
 - [x] You can do a demo, where you build the image, run a container and access content from a browser.
  - Only with my guide, not from head 
 - [x] You have used a nice looking web template, different from the one shown in the webcast.
- - If Le Ray haven't done it before, I wouldn't have bothered
+ - If Le Ray had not done it before, I wouldn't have bothered
 - [x] You are able to explain what you do in the Dockerfile.
  - I did almost nothing in my docker file, I can easily explain what I did
 - [X] You are able to show where the apache config files are located (in a running container).
  - I suppose yes, its in the etc folder somewhere with apache or conf
 - [x] You have documented your configuration in your report.
- - step by step and in english
+ - step by step and in English
 
 
 ## step 2
