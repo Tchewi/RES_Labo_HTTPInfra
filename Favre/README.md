@@ -45,6 +45,19 @@ COPY src/ /var/www/html/
 
 
 ## step 2
+- create dir express-image in docker-images/
+- made a Dockerfile in docker-images/express-image
+- FROM node:12.17, with a command line
+- made a dir src/
+- installed npm
+- npm init
+- filled json file
+- moved json file to src
+- npm install --save chance
+- created index.js
+- tested index.js with node index.js
+- build the docker image with `docker build -t res/express_students .`, don't forget the `.`
+- 
 ### Check boxes
 ## step 3
 ### Check boxes
@@ -53,4 +66,5 @@ COPY src/ /var/www/html/
 ## step 5
 ### Check boxes
 ## Bonus steps
-- [X] played donkey kong country 2 tm, the 1995 classic hit for the Super Nintendo Entertainement System tm
+- [X] played donkey kong country 2 tm, the 1995 classic hit for the Super Nintendo Entertainement System
+- [x] played The Legend of Zelda: A Link to the Past for the Super Nintendo Entertainement System commonly known under the name Zelda 3 
