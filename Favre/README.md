@@ -88,7 +88,21 @@ COPY src/ /var/www/html/
  - Step by step in this exact file.
 
 ## step 3
+- nothing to do for 3a
+- run first container with: `docker run -d --name apache_static res/apache_php`
+- run second container with: `docker run -d --name express_dynamic res/express_students`
+- dir `docker inspect apache_static | grep -i ipaddress` to get the first internal ip address
+- dir `docker inspect express_dynamic | grep -i ipaddress` to get the second internal ip address
+- I could access the ip with telnet directly (docker for linux), ex `telnet 172.17.0.3 3000`, then `GET /2020 HTTP/1.0` got me the JSON
+
 ### Check boxes
+
+- [ ] You have a GitHub repo with everything needed to build the Docker image for the container.
+- [ ] You can do a demo, where you start from an "empty" Docker environment (no container running) and where you start 3 containers: static server, dynamic server and reverse proxy; in the demo, you prove that the routing is done correctly by the reverse proxy.
+- [ ] You can explain and prove that the static and dynamic servers cannot be reached directly (reverse proxy is a single entry point in the infra).
+- [ ] You are able to explain why the static configuration is fragile and needs to be improved.
+- [ ] You have documented your configuration in your report.
+
 ## step 4
 ### Check boxes
 ## step 5
