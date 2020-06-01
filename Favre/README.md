@@ -76,6 +76,7 @@ COPY src/ /var/www/html/
 ### Check boxes
 
 - [X] You have a GitHub repo with everything needed to build the Docker image.
+ - at commit 8a0b62dc3058e8856a61ee0904111fc66acddb18 and beyond (and some before too, isnt life generous?)
 - [X] You can do a demo, where you build the image, run a container and access content from a browser.
  - First I have to do: `npm init` and `npm install --save chance` to install dependency (as i did not put them in the repo) and then with these commands: `docker build -t res/express_students .` at the Dockerfile level I build the image, with `docker run -p 9090:3000 res/express_students` (note the absence of -d) I run the container for which I just build an image, and I access it in my browser at address `localhost:9090/2020`.
 - [X] You generate dynamic, random content and return a JSON payload to the client.
