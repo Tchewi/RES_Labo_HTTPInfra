@@ -50,25 +50,41 @@ COPY src/ /var/www/html/
 - FROM node:12.17, with a command line
 - made a dir src/
 - installed npm
-- npm init
+- `npm init`
 - filled json file
 - moved json file to src
-- npm install --save chance
+- `npm install --save chance`
 - created index.js
 - tested index.js with node index.js
 - build the docker image with `docker build -t res/express_students .`, don't forget the `.`
 - the image building took a lot of time
 - we then docker run the image with `docker run res/express` it works, but the container automatically closes after executing its js code
 - did `docker run -it res/express_students /bin/bash` to explore the container, it has node version 12.17, which is better than my computers 8.10 (i dont know why apt install got me this version, but that's not a problem)
-- 
+- end of 2a
+- did `npm install --save express`
+- wrote mini code
+- tested code with `node index.js`
+- could access code with browser on `localhost:3000`
+- made better code, which return a JSON
+- build image with `docker build -t res/express_students .`
+- run the container with `docker run -p 9090:3000 res/express_students`
+- could access with browser in localhost:9090
+- already have postman as an app on my computer for PRO
+- could do get request with postman (got the JSON)
+- end of step 2b.
+
 ### Check boxes
 
-- [ ] You have a GitHub repo with everything needed to build the Docker image.
-- [ ] You can do a demo, where you build the image, run a container and access content from a browser.
-- [ ] You generate dynamic, random content and return a JSON payload to the client.
-- [ ] You cannot return the same content as the webcast (you cannot return a list of people).
-- [ ] You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
-- [ ] You have documented your configuration in your report.
+- [X] You have a GitHub repo with everything needed to build the Docker image.
+- [X] You can do a demo, where you build the image, run a container and access content from a browser.
+ - First I have to do: `npm init` and `npm install --save chance` to install dependency (as i did not put them in the repo) and then with these commands: `docker build -t res/express_students .` at the Dockerfile level I build the image, with `docker run -p 9090:3000 res/express_students` (note the absence of -d) I run the container for which I just build an image, and I access it in my browser at address `localhost:9090/2020`.
+- [X] You generate dynamic, random content and return a JSON payload to the client.
+ - It is on `localhost:9090/2020`
+- [X] You cannot return the same content as the webcast (you cannot return a list of people).
+- [X] You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
+ - I use express js.
+- [X] You have documented your configuration in your report.
+ - Step by step in this exact file.
 
 ## step 3
 ### Check boxes
