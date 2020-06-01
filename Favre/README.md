@@ -94,6 +94,26 @@ COPY src/ /var/www/html/
 - dir `docker inspect apache_static | grep -i ipaddress` to get the first internal ip address
 - dir `docker inspect express_dynamic | grep -i ipaddress` to get the second internal ip address
 - I could access the ip with telnet directly (docker for linux), ex `telnet 172.17.0.3 3000`, then `GET /2020 HTTP/1.0` got me the JSON
+- mkdir apache-reverse-proxy
+- the video says we wont do a Dockerfile yet, that means that everithing that is said in that video is pointless
+- end of 3b
+- filled the Dockerfile in apache-reverse-proxy
+- mkdir conf
+- mkdir sites-available in conf
+- touch 2 files 000-default.conf and 001-reverse-proxy.conf
+- filled both files
+- build image with `docker build -t res/apache_rp .`
+- run container with `docker run -p 9090:80 res/apache_rp` (in the vido he does 8080 but here we are almost consistent)
+- could go on reverse proxy, but got Forbidden 403 error as expected
+- with telnet i send this load: ```sh
+GET /api/students/ HTTP/1.0
+Host: demo.res.ch
+```
+which worked (got the JSON)(advice, copy past the load to avoid time out)
+- changed my ubuntu files directly in /etc/hosts to map demo.res.ch to 127.0.0.1
+- can ping demo.res.ch, which pings 127.0.0.1
+- could access the site from browser on "demo.res.ch:9090" and http://demo.res.ch:9090/api/students/
+- end of 3c
 
 ### Check boxes
 
