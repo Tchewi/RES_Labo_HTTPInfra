@@ -57,8 +57,19 @@ COPY src/ /var/www/html/
 - created index.js
 - tested index.js with node index.js
 - build the docker image with `docker build -t res/express_students .`, don't forget the `.`
+- the image building took a lot of time
+- we then docker run the image with `docker run res/express` it works, but the container automatically closes after executing its js code
+- did `docker run -it res/express_students /bin/bash` to explore the container, it has node version 12.17, which is better than my computers 8.10 (i dont know why apt install got me this version, but that's not a problem)
 - 
 ### Check boxes
+
+- [ ] You have a GitHub repo with everything needed to build the Docker image.
+- [ ] You can do a demo, where you build the image, run a container and access content from a browser.
+- [ ] You generate dynamic, random content and return a JSON payload to the client.
+- [ ] You cannot return the same content as the webcast (you cannot return a list of people).
+- [ ] You don't have to use express.js; if you want, you can use another JavaScript web framework or event another language.
+- [ ] You have documented your configuration in your report.
+
 ## step 3
 ### Check boxes
 ## step 4
