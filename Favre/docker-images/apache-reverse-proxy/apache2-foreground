@@ -7,8 +7,9 @@ echo "salut ca marche"
 echo "Static app URL est :$STATIC_APP"
 echo "Dynamic app URL est :$DYNAMIC_APP"
 
+# php /var/apache2/templates/config-template.php > /etc/apache2/sites-available/001-reverse-proxy.conf
 
-
+echo "test"
 
 # comment
 rm -f /var/run/apache2/apache2.pid

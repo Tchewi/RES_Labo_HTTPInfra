@@ -145,8 +145,8 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 - run the container with `docker run -e STATIC_APP=172.17.0.2:80 -e DYNAMIC_APP=172.17.0.3:3000 -p 9090:80 res/apache_rp`
 - the variables are good
 - end of 3b
-- mkdir template at dockerfile level
-- `touch template/config-template.php`
+- mkdir templates at dockerfile level
+- `touch templates/config-template.php`
 - wrote first php script
 - apt install php7.2-cli
 - script worked with `php config-template.php`
@@ -157,6 +157,24 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 - change the script to support conf correctly
 - tested and working
 - end of 5c
+- COPY the templates/ in Dockerfile
+- built image with `docker build -t res/apache_rp .`
+- run container `docker run -it res/apache_rp /bin/bash` to verify
+- ok
+- added new steps in `apache2-foreground` for dynamising
+- buit new image with `docker build -t res/apache_rp .`
+- run container with `docker run -e STATIC_APP=172.17.0.2:80 -e DYNAMIC_APP=172.17.0.3:3000 -p 9090:80 res/apache_rp`
+- got an error
+- end of the line
+- the lab is over and is a failure
+- can't find error.
+
+```sh
+[Mon Jun 01 21:38:07.813024 2020] [core:warn] [pid 1] AH00111: Config variable ${APACHE_RUN_DIR} is not defined
+apache2: Syntax error on line 80 of /etc/apache2/apache2.conf: DefaultRuntimeDir must be a valid directory, absolute or relative to ServerRoot
+```
+
+
 
 ### Check boxes
 
