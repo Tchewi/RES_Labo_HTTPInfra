@@ -140,7 +140,12 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 - `touch apache2-foreground` at Dockerfile level in proxy.reverse file
 - filled the file
 - chmod 755 the file
--
+- edited the Dockerfile to COPY the "script"
+- build the image with `docker build -t res/apache_rp .`
+- run the container with `docker run -e STATIC_APP=172.17.0.2:80 -e DYNAMIC_APP=172.17.0.3:3000 -p 9090:80 res/apache_rp`
+- the variables are good
+- end of 3b
+
 
 ### Check boxes
 
