@@ -1,6 +1,7 @@
 # Infra Alban Favre
 
 ## step 1
+
 - clone repo
 - create dir docker-images
 - create dir apache-php-image
@@ -45,6 +46,7 @@ COPY src/ /var/www/html/
 
 
 ## step 2
+
 - create dir express-image in docker-images/
 - made a Dockerfile in docker-images/express-image
 - FROM node:12.17, with a command line
@@ -88,6 +90,7 @@ COPY src/ /var/www/html/
  - Step by step in this exact file.
 
 ## step 3
+
 - nothing to do for 3a
 - run first container with: `docker run -d --name apache_static res/apache_php`
 - run second container with: `docker run -d --name express_dynamic res/express_students`
@@ -117,11 +120,16 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 
 ### Check boxes
 
-- [ ] You have a GitHub repo with everything needed to build the Docker image for the container.
-- [ ] You can do a demo, where you start from an "empty" Docker environment (no container running) and where you start 3 containers: static server, dynamic server and reverse proxy; in the demo, you prove that the routing is done correctly by the reverse proxy.
-- [ ] You can explain and prove that the static and dynamic servers cannot be reached directly (reverse proxy is a single entry point in the infra).
-- [ ] You are able to explain why the static configuration is fragile and needs to be improved.
-- [ ] You have documented your configuration in your report.
+- [x] You have a GitHub repo with everything needed to build the Docker image for the container.
+ - at commit 00dd191aa5c38244321a2d5d00288180fca56194 and beyond (and some before too, isnt life generous?)
+- [x] You can do a demo, where you start from an "empty" Docker environment (no container running) and where you start 3 containers: static server, dynamic server and reverse proxy; in the demo, you prove that the routing is done correctly by the reverse proxy.
+ - yes, we have to run the 2 containers first with: `docker run -d --name apache_static res/apache_php` `docker run -d --name express_dynamic res/express_students`, then with the command `docker inspect CONTAINER NAME | grep -i ipaddress` we get the ip addresses, that we put in hard in `conf/sites-available/001-reverse-proxy.conf`, then we run the rp container with `docker run -p 9090:80 res/apache_rp` and access it in a browser at `demo.res.ch:9090`.
+- [x] You can explain and prove that the static and dynamic servers cannot be reached directly (reverse proxy is a single entry point in the infra).
+ - yes but actually no, you see, as I don't use docker-machine or vagrant, or docker-toolbox, I will always be able to access the container ip if I know them, there is no "gray box" with docker for windows.
+- [x] You are able to explain why the static configuration is fragile and needs to be improved.
+ - The ip addresses have to be entered manually each time the reverse proxy is set up, thats bad.
+- [x] You have documented your configuration in your report.
+ - step by step
 
 ## step 4
 ### Check boxes
