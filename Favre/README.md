@@ -186,8 +186,3 @@ apache2: Syntax error on line 80 of /etc/apache2/apache2.conf: DefaultRuntimeDir
 - [ ] You are able to explain how you have implemented the solution and walk us through the configuration and the code.
 - [ ] You have documented your configuration in your report.
 
-
-## Bonus steps
-- [X] played donkey kong country 2 tm, the 1995 classic hit for the Super Nintendo Entertainement System
-- [x] played The Legend of Zelda: A Link to the Past, the classic 1992 hit for the Super Nintendo Entertainement System commonly known under the name Zelda 3 
-- [x] played Chrono Trigger, the classic 1995 hit for the Super Nintendo Entertainement System
