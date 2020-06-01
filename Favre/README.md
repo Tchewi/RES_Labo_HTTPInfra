@@ -145,7 +145,18 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 - run the container with `docker run -e STATIC_APP=172.17.0.2:80 -e DYNAMIC_APP=172.17.0.3:3000 -p 9090:80 res/apache_rp`
 - the variables are good
 - end of 3b
-
+- mkdir template at dockerfile level
+- `touch template/config-template.php`
+- wrote first php script
+- apt install php7.2-cli
+- script worked with `php config-template.php`
+- add weird env variable in script
+-`export STATIC_APP=salut`
+-`php config-template.php`
+- export successfull
+- change the script to support conf correctly
+- tested and working
+- end of 5c
 
 ### Check boxes
 
