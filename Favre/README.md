@@ -135,7 +135,25 @@ which worked (got the JSON)(advice, copy past the load to avoid time out)
 ## step 4
 ### Check boxes
 ## step 5
+
+- Nothing to do for 5a
+- `touch apache2-foreground` at Dockerfile level in proxy.reverse file
+- filled the file
+- chmod 755 the file
+-
+
 ### Check boxes
+
+
+- [ ] You have a GitHub repo with everything needed to build the various images.
+- [ ] You have found a way to replace the static configuration of the reverse proxy (hard-coded IP adresses) with a dynamic configuration.
+- [ ] You may use the approach presented in the webcast (environment variables and PHP script executed when the reverse proxy container is started), or you may use another approach. The requirement is that you should not have to rebuild the reverse proxy Docker image when the IP addresses of the servers change.
+- [ ] You are able to do an end-to-end demo with a well-prepared scenario. Make sure that you can demonstrate that everything works fine when the IP addresses change!
+- [ ] You are able to explain how you have implemented the solution and walk us through the configuration and the code.
+- [ ] You have documented your configuration in your report.
+
+
 ## Bonus steps
 - [X] played donkey kong country 2 tm, the 1995 classic hit for the Super Nintendo Entertainement System
-- [x] played The Legend of Zelda: A Link to the Past for the Super Nintendo Entertainement System commonly known under the name Zelda 3 
+- [x] played The Legend of Zelda: A Link to the Past, the classic 1992 hit for the Super Nintendo Entertainement System commonly known under the name Zelda 3 
+- [x] played Chrono Trigger, the classic 1995 hit for the Super Nintendo Entertainement System

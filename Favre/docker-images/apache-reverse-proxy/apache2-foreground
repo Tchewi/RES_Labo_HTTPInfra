@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+
+# res
+echo "salut ca marche"
+echo "Static app URL est :$STATIC_APP"
+echo "Dynamic app URL est :$DYNAMIC_APP"
+
+
+
+
+# comment
+rm -f /var/run/apache2/apache2.pid
+
+exec apache2 -DFOREGROUND
