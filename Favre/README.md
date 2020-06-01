@@ -108,7 +108,8 @@ COPY src/ /var/www/html/
 - build image with `docker build -t res/apache_rp .`
 - run container with `docker run -p 9090:80 res/apache_rp` (in the vido he does 8080 but here we are almost consistent)
 - could go on reverse proxy, but got Forbidden 403 error as expected
-- with telnet i send this load: ```sh
+- with telnet i send this load: 
+```sh
 GET /api/students/ HTTP/1.0
 Host: demo.res.ch
 ```
