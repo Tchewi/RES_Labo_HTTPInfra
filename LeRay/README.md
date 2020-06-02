@@ -20,5 +20,4 @@
 - Run "docker exec -it apache_static /bin/bash" to enter into the container (apache_static is the name that we have give to the container because he run a static site)
 - Normally you should be in the place where all files of the website are stored (/var/www/html). Do a save of the file index.html. Then modify the file and reload the website on your browser, the site should have change with your mofifications.
 - We have add a script named "students.js" and load it into the index.html
-- 
 
